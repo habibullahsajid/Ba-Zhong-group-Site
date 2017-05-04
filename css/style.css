@@ -321,7 +321,7 @@ Shortcode Content
     }
 
     .navbar-default {
-        background    : #196F3D !important;
+        background    : #000000 !important;
         padding       : 10px 0;
         border-bottom : none;
     }
@@ -338,7 +338,7 @@ Shortcode Content
     }
 
     .sticky-nav.navbar-default {
-        background-color : #196F3D;
+        background-color : #000000;
         padding          : 15px 0;
     }
 
