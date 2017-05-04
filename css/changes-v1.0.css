@@ -1,0 +1,472 @@
+a {
+    color: #CB4335;
+}
+
+a:hover, a:focus {
+    color: #E74C3C;
+}
+
+.footer .footer-widget .social-links li a:hover {
+    color: #ffffff;
+    background-color: #E74C3C;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#toDown {
+    margin-top: 15%;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    #toDown {
+        display: none;
+    }
+}
+
+#toDown .fa {
+    animation: moveDown 2s ease-out forwards;
+    /* Safari and Chrome */
+    -webkit-animation: moveDown 2s;
+    animation-iteration-count: 100;
+}
+
+@keyframes moveDown {
+    from {
+        margin-top: 0;
+        opacity: 0;
+    }
+    to {
+        margin-top: 20px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes moveDown /* Safari and Chrome */
+{
+    from {
+        margin-top: 0;
+        opacity: 0;
+    }
+    to {
+        margin-top: 20px;
+        opacity: 1
+    }
+}
+
+.business-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    text-align: center;
+    color: #fff;
+}
+
+.business-overlay p {
+    margin: 0 20px 10px;
+}
+
+.ig-services .caption h3 {
+    text-align: center;
+}
+
+.ig-news .caption h3:hover {
+    opacity: 0.7;
+    display: inline-block;
+}
+
+.caption h3 a {
+    color: #313131;
+}
+
+.blog-tag {
+    color: #cb4335;
+    text-transform: uppercase;
+}
+
+.thumbnail:hover .business-overlay {
+    height: 100%;
+    padding: 20% 0 0;
+}
+
+.business-image {
+}
+
+.ig-news {
+    background: #CB4335;
+}
+
+#toTop {
+    color: #E74C3C;
+    border: 2px solid #E74C3C;
+}
+
+#toTop:hover {
+    background-color: #E74C3C;
+}
+
+video {
+    width: 100%;
+}
+
+.client-logos img {
+
+}
+
+.client-logos .col-md-2 {
+    display: inline-block;
+}
+
+.journey .col-md-12 {
+    display: inline-block;
+}
+
+#ig-video-bg {
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    .video-caption {
+        right: 20%;
+        left: 20%;
+        padding-bottom: 30px;
+    }
+}
+
+.video-caption {
+    position: absolute;
+    right: 15%;
+    top: 35%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.news {
+    margin-top: 15px;
+}
+
+.hideoverflow {
+    overflow: hidden;
+}
+
+.video-caption h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #CB4335;
+    border-color: #CB4335;
+}
+
+.facebook-post {
+    padding: 30px;
+    background: #3B5998;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #3b3998;
+    vertical-align: middle;
+    height: 360px;
+}
+
+.facebook-post h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.facebook-post .fa {
+    float: right;
+    font-size: 25px;
+    margin-right: 20px;
+    background: #3b1098;
+    padding: 7px 12px;
+}
+
+.btn-red:focus,
+.btn-red:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background-color: transparent !important;
+}
+
+.fb-content {
+    display: inline-block;
+    width: 88%;
+    padding-left: 2%;
+}
+
+@media screen and (min-width: 1200px) {
+    .navbar-fixed-top.sticky-nav .container {
+        width: 100%;
+        padding-top: 10px;
+    }
+}
+
+.journey-career .journey header {
+    font-family: 'Courgette', cursive;
+    font-size: 50px;
+    color: #fff;
+    padding: 7% 0%;
+    border-radius: 100%;
+    text-align: center;
+    background: #cd3433; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#CB4335, #cd3433); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#CB4335, #cd3433); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CB4335, #cd3433); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CB4335, #cd3433); /* Standard syntax */
+}
+
+.journey-career .journey .col-md-2, .journey-career .journey .col-md-10 {
+    display: inline-block;
+}
+
+.journey-career .journey div p {
+    font-size: 20px;
+    color: #000000;
+    padding: 45px 0 0 30px;
+}
+
+.journey-career .journey article {
+    padding: 15px;
+    border: 1px solid #CB4335;
+    margin: 0 15px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 980px) {
+    .journey-career .journey header {
+        border-radius: 0;
+    }
+
+    .journey-career .journey .col-md-2, .journey-career .journey .col-md-10 {
+        display: block;
+    }
+
+    .journey-career .journey div p {
+        font-size: 20px;
+        color: #000000;
+        padding: 45px 0 0;
+    }
+
+}
+
+.fix-height-305 {
+    height: 350px;
+    overflow: hidden;
+}
+
+.padding-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+@media (min-width: 768px) {
+    .sticky-nav.navbar-default {
+        padding: 0 0 15px 0;
+        box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        transition: all 0.3s;
+    }
+}
+
+.category-icon img {
+    margin: 0 auto;
+}
+
+article.category-item {
+    margin-bottom: 20px;
+}
+
+.navbar-footer li {
+    width: 33.333%;
+    display: inline-block;
+}
+
+.social-icons {
+    display: block !important;
+    margin-bottom: 20px;
+    margin-right: 38px;
+}
+
+.social-icons ul {
+    overflow: auto;
+}
+
+.social-icons ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    float: right;
+    margin-left: 10px;
+}
+
+.social-icons ul li a i {
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+    padding: 3px;
+}
+
+.social-icons li sub {
+    color: #fff;
+}
+
+.sticky-nav a.navbar-brand img {
+
+}
+
+.social-icons ul li a i {
+    transition: all 0.2s ease-in-out;
+}
+
+.social-icons ul li a i:hover {
+    opacity: .7;
+    background: #CB4335;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand{
+        width: 190px;
+        height: auto;
+    }
+
+    .navbar-right {
+        float: right!important;
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+}
+
+/*Version 1.1*/
+
+.single-page-title{
+    background: url(../img/hero-bg.jpg) no-repeat bottom;
+}
+.btn-primary{
+    background-color: #CB4335;
+    border-color: #CB4335;
+}
+.btn-primary:hover{
+    background: #CB3333;
+    border-color: #cd3433;
+}
+.service-icon-style .promo-block-wrapper:hover .promo-icon{
+    background-color: #CB4335;
+
+}
+
+.form-control:focus{
+    border-color: #cd3433 !important;
+}
+#video-overlay{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+}
+.client-logo a img {
+    opacity: 1;
+}
+
+.client-logo a img:hover {
+    width:110%;
+}
+
+.thumbnail {
+    display: block;
+    padding: 0;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0px;
+}
+
+.navbar-brand>img {
+    display: block;
+    width: 190px;
+    height: auto;
+}
+
+.since, .mission {
+    color: #fff;
+    position: absolute;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+.since {
+    top: 43px;
+    left: 168px;
+}
+.mission {
+    top: 92px;
+    left: 80px;
+}
+
+.sticky-nav .since {
+    top: 52px;
+    left: 168px;
+}
+.sticky-nav .mission {
+    top: 104px;
+    left: 80px;
+}
+
+.sticky-nav .navbar-nav{
+    margin-right: 100px
+}
+.nav-cta {
+    margin-top: -45px;
+}
+.ig-section{
+    background: #fff;
+}
+.ig-section:nth-child(2n){
+    background: #CB4335;
+}
+.ptb-30{
+    padding: 30px 0;
+}
+.section-title{
+    margin-bottom: 10px;
+}
+.footer-logo .mission {
+    top: 65px;
+    right:25px
+}
+
+.footer-logo .since {
+    top: 15px;
+    right:25px;
+}
+.footer-logo{
+    position:relative;
+}
