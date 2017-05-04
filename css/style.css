@@ -52,7 +52,7 @@ h6 {
 LINK STYLE
 ------------------------------------------*/
 a {
-    color              : #2ECC71;
+    color              : white;
     text-decoration    : none;
     -webkit-transition : all 0.3s ease 0s;
     -moz-transition    : all 0.3s ease 0s;
@@ -321,7 +321,7 @@ Shortcode Content
     }
 
     .navbar-default {
-        background    : #000000 !important;
+        background    : #4a4a4a !important;
         padding       : 10px 0;
         border-bottom : none;
     }
@@ -338,7 +338,7 @@ Shortcode Content
     }
 
     .sticky-nav.navbar-default {
-        background-color : #000000;
+        background-color : #4a4a4a;
         padding          : 15px 0;
     }
 
@@ -676,13 +676,8 @@ Shortcode Content
     margin-top  : -25px;
     background  : transparent;
     cursor      : pointer;
-    border      : 2px solid #2ECC71;
+    border      : 2px solid white;
     text-shadow : none;
-}
-
-.hero-slide .carousel-control.left:hover,
-.hero-slide .carousel-control.right:hover {
-    background: #2ECC71;
 }
 
 .hero-slide .carousel-control.left {
@@ -698,8 +693,7 @@ Shortcode Content
 }
 
 .hero-slide .carousel-indicators li {
-    border : 2px solid #2ECC71;
-    background: #2ECC71;
+    border : 2px solid white;
 }
 
 /*Media Query*/
@@ -1411,12 +1405,11 @@ service-icon-style
     Footer
 ----------------------------------------------- */
 .footer {
-    /*background : #313131;*/
-    background : rgba(29, 136, 81, 0.95);
+    background : #313131;
 }
 
 .footer .footer-block {
-    border-right : 1px solid #196F3D;
+    border-right : 1px solid #3a3a3a;
     padding      : 80px 60px;
     min-height   : 380px;
 }
@@ -1452,7 +1445,6 @@ service-icon-style
 }
 
 .footer .widget_text {
-    color: white;
 }
 
 .footer .footer-logo {
@@ -1463,14 +1455,14 @@ service-icon-style
     font-size     : 11px;
     padding       : 5px 18px;
     border-radius : 50px;
-    color         : white;
-    border        : 1px solid #196F3D;
+    color         : #6b6b6b;
+    border        : 1px solid #4a4a4a;
     margin-top    : 40px;
 }
 
 .footer .footer-widget .btn:hover {
     color            : #ffffff;
-    background-color : #2ECC71;
+    background-color : white;
     border           : 1px solid transparent;
 }
 
@@ -1487,8 +1479,8 @@ service-icon-style
     font-size        : 20px;
     width            : 42px;
     height           : 42px;
-    color            : white;
-    background-color : #196F3D;
+    color            : #6b6b6b;
+    background-color : #4a4a4a;
     line-height      : 42px;
     text-align       : center;
     border-radius    : 50%;
@@ -1496,18 +1488,18 @@ service-icon-style
 
 .footer .footer-widget .social-links li a:hover {
     color            : #ffffff;
-    background-color : #2ECC71;
+    background-color : black;
 }
 
 .footer .copyright-section {
-    background-color : #196F3D;
-    color            : white;
+    background-color : #2d2d2d;
+    color            : #6b6b6b;
     padding          : 20px 0;
 }
 
 .footer .copyright-section .copytext {
     text-transform : uppercase;
-    color          : white;
+    color          : #6b6b6b;
     font-weight    : 600;
 }
 
@@ -1521,15 +1513,13 @@ service-icon-style
 .footer .copyright-section li a {
     display   : block;
     font-size : 13px;
-    color     : white;
+    color     : #6b6b6b;
 }
 
 .footer .copyright-section li a:hover,
 .footer .copyright-section li.active a {
     color : #ffffff;
 }
-
-
 
 /* ---------------------------------------------- /*
  * Preloader
@@ -1566,5 +1556,5 @@ service-icon-style
 }
 
 a:hover{
-    color: #2dba63;
+    color: #ffffff;
 }
