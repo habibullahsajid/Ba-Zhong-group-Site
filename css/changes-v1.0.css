@@ -42,13 +42,14 @@
 .thumbnail:hover .business-overlay {
     height: 100%;
     padding: 20% 0 0;
+    border: none;
 }
 
 .business-image {
 }
 
 .fix-height-305 {
-    height: 350px;
+    height: 360px;
     overflow: hidden;
 }
 
