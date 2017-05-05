@@ -1357,7 +1357,7 @@ service-icon-style
 }
 
 .user-message textarea {
-    min-height: 195px;
+    min-height: 271px;
     padding-top: 12px;
 }
 .contact-form form button {
@@ -1369,6 +1369,7 @@ service-icon-style
 .user-email,
 .user-phone,
 .user-url,
+.user-subject,
 .user-message{
     position: relative;
 }
@@ -1376,6 +1377,7 @@ service-icon-style
 .user-email::after,
 .user-phone::after,
 .user-url::after,
+.user-subject::after,
 .user-message::after {
     position: absolute;
     left: 15px;
@@ -1395,6 +1397,9 @@ service-icon-style
 }
 .user-url::after {
     content: "\f0ac";
+}
+.user-subject::after {
+    content: "\f040";
 }
 .user-message::after {
     content: "\f086";
