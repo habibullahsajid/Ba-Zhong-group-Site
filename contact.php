@@ -1,3 +1,39 @@
+<?php
+$name = $email = $message = $to = $subject = "";
+$result = "";
+$headers = "";
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $number = $_POST['number'];
+    $message = $_POST['message'];
+    $subject = $_POST['subject'];
+
+    $to = 'sherazahmed93@gmail.com';
+    require 'PHPMailer\PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+
+    $mail->isSMTP();
+    $mail->Host = 'smtp.mail.yahoo.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'habibullahsajid@ymail.com';
+    $mail->Password = 'Window245';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
+
+    $mail->setFrom($email, $name);
+    $mail->addAddress($to, 'Sheraz Ahmad');
+    $mail->Subject = $subject;
+    $mail->Body = $message;
+
+    if ($mail->send()) {
+        $result = '<div class="alert alert-success">Thank You! I will be in touch</div>';
+    } else {
+        $result = '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>' . "\n" . $mail->ErrorInfo;
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,14 +47,13 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- off-canvas -->
-    <link href="css/mobile-menu.css" rel="stylesheet">
+    <link href="css/mobile-menu.css" rel="stylesheet" type="text/css">
     <!-- font-awesome -->
-    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css">
     <!-- Style CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -61,7 +96,7 @@
 
                         <ul class="nav-cta hidden-xs">
                             <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><i
-                                    class="fa fa-search"></i></a>
+                                            class="fa fa-search"></i></a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <div class="head-search">
@@ -86,9 +121,9 @@
                             <li><a href="about.html">About</a></li>
                             <li><a href="services.html">Services</a></li>
                             <li><a href="index.html">Business</a></li>
-                            <li class="active"><a href="contact.html">Contact</a></li>
+                            <li class="active"><a href="contact.php">Contact</a></li>
                             <li class="dropdown m-menu-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Features
-                                <span><i class="fa fa-angle-down"></i></span></a>
+                                    <span><i class="fa fa-angle-down"></i></span></a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <div class="m-menu-content">
@@ -152,7 +187,7 @@
 
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <form role="form" action="php/contactUs.php" method="post">
+                            <form role="form" action="contact.php" method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group user-name">
@@ -164,32 +199,43 @@
 
                                         <div class="form-group user-subject">
                                             <label for="subject" class="sr-only">Subject</label>
-                                            <input type="text" name="subject" class="form-control" required="required" id="subject"
+                                            <input type="text" name="subject" class="form-control" required="required"
+                                                   id="subject"
                                                    placeholder="Subject">
                                         </div>
 
                                         <div class="form-group user-email">
                                             <label for="emailFive" class="sr-only">Email</label>
-                                            <input type="email" name="email" class="form-control" required="required" id="emailFive"
+                                            <input type="email" name="email" class="form-control" required="required"
+                                                   id="emailFive"
                                                    placeholder="Email Address">
                                         </div>
 
 
                                         <div class="form-group user-phone">
                                             <label for="mobile" class="sr-only">Mobile</label>
-                                            <input type="number" name="number" class="form-control" required="required" id="mobile"
+                                            <input type="number" name="number" class="form-control" required="required"
+                                                   id="mobile"
                                                    placeholder="Phone">
                                         </div>
                                     </div><!-- /.col-md-6 -->
                                     <div class="col-md-6">
                                         <div class="form-group user-message">
                                             <label for="messageOne" class="sr-only">Message</label>
-                                            <textarea class="form-control" name="message" required="required" id="messageOne"
+                                            <textarea class="form-control" name="message" required="required"
+                                                      id="messageOne"
                                                       placeholder="Write Message"></textarea>
                                         </div>
                                     </div><!-- /.col-md-6 -->
                                 </div><!-- /.row-->
-                                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                                <div class="form-group">
+                                    <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-10 col-sm-offset-2">
+                                        <?php echo $result; ?>
+                                    </div>
+                                </div>
                             </form>
                         </div><!-- /.col-md-8 -->
                     </div>
@@ -213,7 +259,7 @@
                                 <div class="footer-widget widget_text">
                                     <div class="footer-logo">
                                         <a href="#"><h2><span style="color: white">ba zhong Group of Companies</span>
-                                        </h2></a>
+                                            </h2></a>
                                     </div>
                                     <p>Continually matrix cross functional opportunities whereas ethical information.
                                         Compellingly
@@ -265,7 +311,7 @@
                     <div class="container clearfix">
            <span class="copytext">Copyright &copy; 2017 | <a href="#">ba zhong Group of Companies</a> Designed And Developed By:
                             <strong style="color: #3cbb05;"><a
-                                    href="https://houseofdoyens.slack.com/">House Of Doyens</a>
+                                        href="https://houseofdoyens.slack.com/">House Of Doyens</a>
                             </strong>
                         </span>
 
@@ -300,7 +346,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -311,12 +357,12 @@
 </div>
 <!-- #main-wrapper -->
 
-
 <!-- Script -->
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+
 <script src="js/smoothscroll.js"></script>
 <script src="js/mobile-menu.js"></script>
 <script src="js/flexSlider/jquery.flexslider-min.js"></script>
