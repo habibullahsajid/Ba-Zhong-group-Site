@@ -20,15 +20,14 @@ $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 $mail->setFrom($email, $name);
-$mail->addAddress('habibullahsajid@ymail.com', 'Sheraz Ahmad');
+$mail->addAddress($to, 'Sheraz Ahmad');
 $mail->Subject = $subject;
 $mail->Body = $message;
 
-if ($mail->send()) {
-    echo '<div class="alert alert-success">Thank You! I will be in touch</div>';
-} else {
+if (!$mail->send()) {
     echo '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-//    echo '<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>' . "\n" . $mail->ErrorInfo;
+} else {
+    echo '<div class="alert alert-success">Thank You! I will be in touch</div>';
 }
 
 ?>

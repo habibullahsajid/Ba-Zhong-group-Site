@@ -676,8 +676,13 @@ Shortcode Content
     margin-top  : -25px;
     background  : transparent;
     cursor      : pointer;
-    border      : 2px solid white;
+    border      : 2px solid #2ECC71;
     text-shadow : none;
+}
+
+.hero-slide .carousel-control.left:hover,
+.hero-slide .carousel-control.right:hover {
+    background: #2ECC71;
 }
 
 .hero-slide .carousel-control.left {
@@ -693,7 +698,8 @@ Shortcode Content
 }
 
 .hero-slide .carousel-indicators li {
-    border : 2px solid white;
+    border : 2px solid #2ECC71;
+    background: #2ECC71;
 }
 
 /*Media Query*/
@@ -802,57 +808,6 @@ Shortcode Content
 
 .x-services .thumbnail .caption p {
     margin : 0;
-}
-
-/* --------------------------------------------------
-features start
------------------------------------------------------*/
-.x-features {
-    background : rgba(29, 136, 81, 0.95);
-    padding    : 100px 0 85px;
-}
-
-.x-features .section-title h2 {
-    color : #ffffff;
-}
-
-.x-features .img-left {
-    margin-top : 20px;
-}
-
-@media (max-width : 992px) {
-    .x-features .img-left {
-        margin-bottom : 40px;
-        margin-top    : 0px;
-    }
-}
-
-.x-features .promo-icon {
-    float        : left;
-    margin-right : 25px;
-    font-size    : 30px;
-    color        : white;
-}
-
-.x-features .promo-content {
-    color          : white;
-    overflow       : hidden;
-    border-bottom  : 1px solid rgba(93, 246, 106, 0.4);
-    margin-bottom  : 20px;
-    padding-bottom : 10px;
-}
-
-.x-features .promo-content.last-type {
-    border-bottom  : 0;
-    margin-bottom  : 0px;
-    padding-bottom : 0px;
-}
-
-.x-features .promo-content h3 {
-    font-size   : 15px;
-    line-height : 26px;
-    font-weight : 600;
-    color       : #ffffff;
 }
 
 /* ----------------------------------------------
