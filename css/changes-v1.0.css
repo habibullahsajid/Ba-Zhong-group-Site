@@ -62,3 +62,11 @@
     padding-right: 0;
     padding-left: 0;
 }
+
+.client-logos img {
+
+}
+
+.client-logos .col-md-2 {
+    display: inline-block;
+}
